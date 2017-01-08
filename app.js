@@ -1,13 +1,14 @@
-var express = require('express');
-var app = express();
+var express = require("express");
+var app     = express();
+var path    = require("path");
 
-app.get('/', function (req, res) {
-   res.send('Hello World');
-})
+app.use("/public", express.static(path.join(__dirname, 'public')));
 
-var server = app.listen(8081, function () {
-   var host = server.address().address
-   var port = server.address().port
+app.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/views/signal.html'));
+  //__dirname : It will resolve to your project folder.
+});
 
-   console.log("Example app listening at http://%s:%s", host, port)
-})
+app.listen(3000);
+
+console.log("Running at Port 3000");
