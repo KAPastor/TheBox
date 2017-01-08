@@ -31,8 +31,12 @@ function updateClock ( )
   	var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
 
 
-   	$("#clock").html(currentTimeString);
+   	$("#clock").html(currentTimeString + '&nbsp;&nbsp;&nbsp; <i class="fa fa-bell" style="cursor:pointer" onClick="OpenAlarm();" data-toggle="modal" data-target="#myModal" aria-hidden="true"></i>');
 
  };
+
+function OpenAlarm(){
+
+}
 
  setInterval('updateClock()', 1000);
