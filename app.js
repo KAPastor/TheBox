@@ -31,6 +31,13 @@ app.get('/current_settings',function(req,res){
 
 });
 
+app.get('/compare_password',function(req,res){
+});
+
+
+app.get('/update_clock',function(req,res){
+});
+
 
 function current_settings_db(cb){
   db.all("SELECT * FROM signal_solution", function(err, rows) {

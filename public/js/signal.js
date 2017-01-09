@@ -35,9 +35,6 @@ function updateClock ( )
 
  };
 
-function OpenAlarm(){
-
-}
 
 
 $.ajax('/current_settings', {
