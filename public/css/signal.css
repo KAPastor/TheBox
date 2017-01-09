@@ -34,6 +34,44 @@ margin-bottom: 0px;
 box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
 
 }
+
+.section_sound{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img/sound.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 0px;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
+}
+
+.section_number{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img/number.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 0px;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
+}
+.section_answer{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img/answer.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 0px;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
+}
+
+
+
 #clock{
   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 80px;
@@ -62,6 +100,25 @@ box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+
+
+.signal_blink {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 10s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
 
 @-moz-keyframes blinker {
     0% { opacity: 1.0; }
