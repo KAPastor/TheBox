@@ -39,11 +39,10 @@ function updateClock ( )
 
 $.ajax('/current_settings', {
       success: function(data) {
-        updateClock();
+        // updateClock();
         if (data.is_clock_on==1){
           setInterval('updateClock()', 1000);
         }
-         console.log(data)
       },
       error: function() {
       }
