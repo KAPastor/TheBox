@@ -41,26 +41,25 @@
                 <a class="navbar-brand">
                   Signal
                 </a>
-
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a>The View</a>
+                        <a onclick="scrollTo('section_towers')">The View</a>
                     </li>
                     <li>
-                        <a>The Clock</a>
+                        <a onclick="scrollTo('section_clock')">The Clock</a>
                     </li>
                     <li>
-                        <a>The Sound</a>
+                        <a onclick="scrollTo('section_sound')">The Sound</a>
                     </li>
                     <li>
-                        <a>The Number</a>
+                        <a onclick="scrollTo('section_number')">The Number</a>
                     </li>
                     <li>
-                        <a>The Answer</a>
+                        <a onclick="scrollTo('section_answer')">The Answer</a>
                     </li>
                     <li>
                         <a class="blink_me" onClick="$(this).fadeOut('slow')">Help</a>
@@ -100,7 +99,7 @@
                         <hr class="small">
                         <span class="subheading">This is your clock.  It seems to have an alarm.  Perhaps you should look at it.</span>
                         <hr>
-                          <div id="clock">6:92PM &nbsp;&nbsp;&nbsp; <i class="fa fa-bell" style="cursor:pointer" onClick="OpenAlarm();" data-toggle="modal" data-target="#myModal" aria-hidden="true"></i></div>
+                          <div id="clock">1:08:00 PM &nbsp;&nbsp;&nbsp; <i class="fa fa-bell" style="cursor:pointer" onClick="OpenAlarm();" data-toggle="modal" data-target="#myModal" aria-hidden="true"></i></div>
                     </div>
                 </div>
             </div>
@@ -184,6 +183,3 @@
 </body>
 
 </html>
-
-
-<!-- To reach a port we must set sail -->

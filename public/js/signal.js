@@ -35,6 +35,12 @@ function updateClock ( )
 
  };
 
+function scrollTo(divID){
+  lastElementTop = $('.' + divID).position().top ;
+  scrollAmount = lastElementTop;
+  $('body').animate({scrollTop: scrollAmount},1000);
+}
+
 
 
 $.ajax('/current_settings', {
