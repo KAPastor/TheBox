@@ -10,13 +10,10 @@
     <title>Signal - A puzzle</title>
 
     <!-- Vendor Packages (These must be locally downloaded and referenced) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/public/vendor/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="/public/vendor/bootstrap/css/bootstrap.min.css">
+    <script src="/public/vendor/bootstrap/js/bootstrap.min.js"></script>
     <link href="/public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Theme CSS -->
     <link href="/public/css/clean-blog.min.css" rel="stylesheet">
@@ -51,37 +48,44 @@
 
   <!-- The View Section: Sets up the main theme and scenario -->
   <header class="intro-header section_towers">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                      <img class="signal_blink" src="/public/img/Signa-logo.png">
-                        <hr class="small">
-                        <span class="subheading">You awaken on a beach, towers in the distance
-                        and no memory of previous events.</span>
-                        <hr>
-                        <span class=" smallify">You have a clock, a box and some papers.  Perhaps these will help you find your way.</span>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="site-heading">
+            <img class="signal_blink" src="/public/img/Signa-logo.png">
+            <hr class="small">
+            <span class="subheading">You awaken on a beach, towers in the distance
+            and no memory of previous events.</span>
+            <hr>
+            <span class=" smallify">You have a clock, a box and some papers.
+              Perhaps these will help you find your way.</span>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <header class="intro-header section_clock">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                      <h1>The Clock</h1>
-                        <hr class="small">
-                        <span class="subheading">This is your clock.  It seems to have an alarm.  Perhaps you should look at it.</span>
-                        <hr>
-                          <div id="clock">1:08:00 PM &nbsp;&nbsp;&nbsp; <i class="fa fa-bell" style="cursor:pointer" onClick="OpenAlarm();" data-toggle="modal" data-target="#myModal" aria-hidden="true"></i></div>
-                    </div>
-                </div>
-            </div>
+  <!-- The Clock Section: Nice Try -->
+  <header class="intro-header section_clock">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="site-heading">
+            <h1>The Clock</h1>
+            <hr class="small">
+            <span id="ClockHeading" class="subheading">This is your clock.  Something is wrong with it.
+             Sand perhaps. Maybe give it a few shakes?</span>
+            <hr>
+            <div id="clock">1:08:00 PM &nbsp;&nbsp;&nbsp; <i id="alarm_icon" class="fa fa-bell" style="cursor:pointer" data-toggle="modal" data-target="" aria-hidden="true"></i></div>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
+
+
+
+
 
     <header class="intro-header section_sound">
         <div class="container">
@@ -135,10 +139,7 @@
 
 
 
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
+
     <!-- Theme JavaScript -->
     <script src="/public/js/clean-blog.min.js"></script>
     <script src="/public/js/signal.js"></script>
@@ -146,7 +147,7 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="opacity:0.8">
+    <div class="modal fade" id="alarmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="opacity:0.8">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-body alarm_clock">
