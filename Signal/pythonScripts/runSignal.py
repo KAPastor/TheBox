@@ -1,79 +1,44 @@
-var express = require("express");
-var app     = express();
-var path    = require("path");
+import sqlite3
+conn = sqlite3.connect('../signal.db')
+c = conn.cursor()
 
-var dblite = require("dblite");
-var db = dblite("signal.db");
-// db.close();
+# Insert a row of data
 
-
-
-
-app.use("/public", express.static(path.join(__dirname, 'public')));
-
-app.get('/',function(req,res){
-
-  db.query("SELECT * FROM signal_solution", function(err, rows) {
-    });
-  res.sendFile(path.join(__dirname+'/views/signal.html'));
-  //__dirname : It will resolve to your project folder.
-});
-
-app.get('/current_settings',function(req,res){
-
-    current_settings_db(function(current_settings){
-      res.json(current_settings);
-    });
-
-});
-
-app.get('/check_solution',function(req,res){
-    check_solution(function(solution,pin){
-
-      if (solution.toLowerCase() == req.query.userSolution.toLowerCase() ){
-        res.json({"response":pin});
-      }else{
-        res.json({"response":"You hear nothing."});
-      }
-    });
-});
+# Save (commit) the changes
+# conn.commit()
 
 
+def checkInteraction():
+    print "Checking interactions"
+    interaction=True
+    if interaction:
+        updateSandCounter()
+    else:
+        print "No interaction yet"
 
-app.get('/compare_password',function(req,res){
-});
+def updateSandCounter(): # WORKS!
+    print "Updating database"
+    print " Getting sand counter current"
+    c.execute("SELECT sand_counter FROM signal_solution")
+    curr_sand_counter = c.fetchone();
+    c.execute("UPDATE signal_solution SET sand_counter=" + str(curr_sand_counter[0]+1))
+    conn.commit()
 
-
-app.get('/update_clock',function(req,res){
-});
-
-
-function check_solution(cb){
-  db.query("SELECT password,pin FROM signal_solution", function(err, rows) {
-        rows.forEach(function (row) {
-          pwd = row[0];
-          pin = row[1];
-        });
-        cb(pwd,pin);
-    });
-}
-
-
-
-function current_settings_db(cb){
-  db.query("SELECT * FROM signal_solution", function(err, rows) {
-        rows.forEach(function (row) {
-          current_settings = {"first_name":row[2],"is_clock_on":row[0], "password":row[1]};
-        });
-        cb(current_settings)
-    });
-
-
-}
+def checkSignal():
+    print "Checking if we should start the Signal"
+    c.execute("SELECT sand_counter FROM signal_solution")
+    curr_sand_counter = c.fetchone();
+    if curr_sand_counter[0]>=3:
+        print "Starting signal loop"
+        return True
+    else:
+        print "Sand still stuck"
+        return False
 
 
 
 
-app.listen(3000);
-
-console.log("Running at Port 3000");
+# Script start:
+# updateSandCounter()
+while True:
+    checkSignal()
