@@ -23,7 +23,7 @@ box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.47);
 }
 
 .section_clock{
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img/clock.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img/clock.jpeg') no-repeat center center fixed;
   -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;

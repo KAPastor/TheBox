@@ -21,7 +21,7 @@ var clockInterval;
         // If the clock value is greater than 3 run the clock and update the front end
         if (data.is_clock_on>=3){
           clearInterval(clockCheckInterval);
-          clockInterval = setInterval('updateClock()', 1000);
+          // clockInterval = setInterval('updateClock()', 1000);
           $('#ClockHeading').html('Looks like the clock has some alarms set.');
 
         }else{
@@ -49,8 +49,13 @@ function checkClock(){
     success: function(data) {
       if (data.is_clock_on>=3){
         clearInterval(clockCheckInterval);
-        clockInterval = setInterval('updateClock()', 1000);
-        $('#ClockHeading').html('Looks like the clock has some alarms set.');
+        // clockInterval = setInterval('updateClock()', 1000);
+        $('#ClockHeading').html('The signal is on .');
+        $('#transmit').html('<i class="fa fa-signal fa-lg"></i>');
+      }else if(data.is_clock_on==1){
+        $('#ClockHeading').html('The shaking seems to loosen some sand.');
+      }else if(data.is_clock_on==2){
+        $('#ClockHeading').html('The mechanism is almost free.  Keep trying.');
       }
     },
     error: function() {

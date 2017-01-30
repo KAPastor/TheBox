@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li><a onclick="scrollTo('section_towers')">The View</a></li>
-            <li><a onclick="scrollTo('section_clock')">The Clock</a></li>
+            <li><a onclick="scrollTo('section_clock')">The Transmitter</a></li>
             <li><a onclick="scrollTo('section_sound')">The Sound</a></li>
             <li><a onclick="scrollTo('section_number')">The Number</a></li>
             <li><a onclick="scrollTo('section_answer')">The Answer</a></li>
@@ -71,12 +71,17 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="site-heading">
-              <h1>The Clock</h1>
+              <h1>The Transmitter</h1>
               <hr class="small">
-              <span id="ClockHeading" class="subheading">This is your clock.  Something is wrong with it.
+              <span id="ClockHeading" class="subheading">This is your transmitter.  Something is wrong with it.
                Sand perhaps. Maybe give it a few shakes?</span>
               <hr>
-              <div id="clock">1:08:00 PM &nbsp;&nbsp;&nbsp; <i id="alarm_icon" class="fa fa-bell" style="cursor:pointer" data-toggle="modal" data-target="" aria-hidden="true"></i></div>
+              <div id="transmit">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-signal fa-stack-1x"></i>
+                  <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                </span>
+              </div>
             </div>
           </div>
         </div>
