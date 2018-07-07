@@ -9,6 +9,13 @@ sudo apt-get install python3.6
 # Need to install python packages based on the requirements.txt in this directory
 pip3 install -r requirements.txt
 
+# NEed to include adminDashboardFlask.py as a cron job
+# Have to set up the hotspot information (possibly via admin panel)
+
 # In the end we will run the admin on local host
 cd ./AdminDashboard
 python3 adminDashboardFlask.py
+
+# Need to show the ip and ssh access command for us
+# After this is done we can go headless
+# If running the admin show the url to access
