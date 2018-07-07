@@ -1,5 +1,6 @@
 # TheBox
 ToDo:
+__ Hardware stuff
 - Make separate classes for each sensor type which includes the GPIO pin inputs, and outputs
 - Include a test function for each sensor to make sure they are working
 - MAke a puzzle pipeline class that is able to connect the sensors outputs together, or read a SQLite DB
@@ -9,6 +10,14 @@ ToDo:
 - Create a test for the main loop to mimic activations
 - Create puzzle state objects for saving the current state of the puzzle
 
+___ Web/Admin Stuff
 - Need to make a Flask admin dashboard to load new puzzles or reset them
 - Interface needs to also allow for adding Wifi networks or renaming of the box network etc.
 - Should interface with puzzle repo to see new puzzle configurations
+
+___ Setup stuff
+- Make a script that checks the wifi for avialable networks
+- Script to automatically update and download everything for generating a wifi hotspot network in one go. 
+- Python script to switch between hotspot mode (during a puzzle) to wifi mode to connect to the internet. The admin site will then be on the non localhost IP but the shared IP.
+- Make a fairly detailed setup document on this.
+- Ideally I could get the hardware and pull git from here and run the system setup script which would do everything.  This first step needs to be documented.  ie. Get NOOBS, sudo update sudo apt-get install git, git pull this repo and run...
