@@ -1,0 +1,39 @@
+In order to set this up from scratch, flash the SD card and load NOOBS:
+https://www.raspberrypi.org/downloads/noobs/
+Use SDFormatter
+https://www.raspberrypi.org/learning/software-guide/quickstart/
+https://www.raspberrypi.org/help/noobs-setup/2/
+Follow this in order to get the basic OS installed.
+
+Log in with pi and raspberry
+
+SETUP WIFI:
+https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/setting-up-wifi-with-occidentalis
+sudo nano /etc/network/interfaces
+auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+allow-hotplug wlan0
+auto wlan0
+
+
+iface wlan0 inet dhcp
+        wpa-ssid "ssid"
+        wpa-psk "password"
+
+
+
+REBOOT now u have wifi yay
+
+
+
+Next we need to update the repos:
+sudo apt-get update
+sudo apt-get install git
+go to ~/ and run
+git clone https://github.com/KAPastor/TheBox.git
+cd to SystemSetup
+ chmod 755 InitialSystemSetup
+run ./InitialSystemSetup.sh
