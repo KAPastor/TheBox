@@ -1,6 +1,11 @@
 # The Box: A Hardware Repository for the Raspberry Pi
 Whenever I start a new RPi project there are a few annoying bits.  Flashing the OS, getting the Wifi to work and getting my python scripts up to date.  Even when all of this is done, the barrier to entry to get hardware to interface into my project can be annoying to dreadful.  The Box is part set of instructions, part hardware web admin panel and part project repository.  It takes you from hardware setup and presents you with a web interface with pre-programmed sensor componenets that you can test on your browser (on the Pi or on your local network).  This means headless work and no need for a monitor.  Finally it interfaces with a repository of user projects that you can download, configure and launch user generated admin panels.
 
+Projects:
+- Puzzle
+- Garden Sensor
+
+
 ToDo:
 __ Hardware stuff
 - Make separate classes for each sensor type which includes the GPIO pin inputs, and outputs
