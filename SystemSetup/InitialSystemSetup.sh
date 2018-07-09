@@ -5,7 +5,7 @@
 echo "The Box (v0.1): Initial System Setup"
 
 ### Variables:
-sudo apt-get install python3.6
+sudo apt-get install python3-pip
 # Need to install python packages based on the requirements.txt in this directory
 pip3 install -r requirements.txt
 
@@ -13,7 +13,6 @@ pip3 install -r requirements.txt
 # Have to set up the hotspot information (possibly via admin panel)
 
 # In the end we will run the admin on local host
-cd ./AdminDashboard
 export FLASK_APP=adminDashboard.py
 flask run --host=0.0.0.0
 # Need to show the ip and ssh access command for us
