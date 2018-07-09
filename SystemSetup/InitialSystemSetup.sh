@@ -13,8 +13,8 @@ pip3 install -r requirements.txt
 # Have to set up the hotspot information (possibly via admin panel)
 
 # In the end we will run the admin on local host
-export FLASK_APP=adminDashboard.py
-flask run --host=0.0.0.0
+cd ../AdminDashboard
+python3 adminDashboard.py
 # Need to show the ip and ssh access command for us
 # After this is done we can go headless
 # If running the admin show the url to access
