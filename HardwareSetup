@@ -1,15 +1,17 @@
-In order to set this up from scratch, flash the SD card and load NOOBS:
+In order to set this up from scratch, flash the SD card and load Raspbain lite:
 https://www.raspberrypi.org/downloads/noobs/
 Use SDFormatter
 https://www.raspberrypi.org/learning/software-guide/quickstart/
 https://www.raspberrypi.org/help/noobs-setup/2/
 Follow this in order to get the basic OS installed.
-
+Use Etcher to image it
 Log in with pi and raspberry
+
 
 SETUP WIFI:
 https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/setting-up-wifi-with-occidentalis
 sudo nano /etc/network/interfaces
+
 auto lo
 
 iface lo inet loopback
@@ -20,13 +22,26 @@ auto wlan0
 
 
 iface wlan0 inet dhcp
-        wpa-ssid "ssid"
-        wpa-psk "password"
+wpa-ssid "ssid"
+wpa-psk "password"
 
 
 
 REBOOT now u have wifi yay
+hostname -I
+ssh pi@...
 
+or look ip under nmap
+From the terminal with raspi-config
+Enter sudo raspi-config in a terminal window
+Select Interfacing Options
+Navigate to and select SSH
+Choose Yes
+Select Ok
+Choose Finish
+Start the SSH service with systemctl
+sudo systemctl enable ssh
+sudo systemctl start ssh
 
 
 Next we need to update the repos:
