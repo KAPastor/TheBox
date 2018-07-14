@@ -38,11 +38,17 @@ sudo raspi-config
 ```
 
 Select Interfacing Options
+
 Navigate to and select SSH
+
 Choose Yes
+
 Select Ok
+
 Choose Finish
+
 Start the SSH service with systemctl
+
 
 ```
 sudo systemctl enable ssh
