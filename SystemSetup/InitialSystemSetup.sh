@@ -15,7 +15,7 @@ echo "___ Adding the admin server to the boot list"
 cd ../AdminDashboard
 sudo cp /etc/rc.local /etc/rc.local_bkp
 sudo chmod 777 /etc/rc.local
-sed '$ipython3 ~/TheBox/AdminDashboard/adminDashboard.py &' /etc/rc.local > /etc/rc.local
+sed -i '$ipython3 ~/TheBox/AdminDashboard/adminDashboard.py &' /etc/rc.local
 
 
 
