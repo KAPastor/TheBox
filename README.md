@@ -83,7 +83,9 @@ Remember the whole point of this is to get to the web interface that helps us de
 At this point the Admin page has all you need including the Wiki, so I bid you goodbye and have fun!  
 
 
-
+ADMIN PANEL:
+- Switch Modes - hot swap when wanting to use external internet....
+- Show IP on networks
 
 TODO: PLZ IGNORE lols
 
