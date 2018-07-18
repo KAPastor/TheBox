@@ -14,8 +14,14 @@ echo "___ Adding the admin server to the boot list"
 # In the end we will run the admin on local host
 cd ../AdminDashboard
 sudo cp /etc/rc.local /etc/rc.local_bkp
-sudo chmod 777 /etc/rc.local
-sudo sed -i '$i/usr/bin/python3 /home/pi/TheBox/AdminDashboard/adminDashboard.py &' /etc/rc.local
+sudo chmod 755 ../AdminDashboard/adminDashboard.py
+
+# Copy the job sh file
+sudo cp AdminService.sh /etc/init.d
+sudo chmod 755 /etc/init.d/AdminService.sh
+sudo /etc/init.d/AdminService.sh start
+
+
 
 
 
