@@ -12,8 +12,6 @@ pip3 install -r requirements.txt
 
 echo "___ Adding the admin server to the boot list"
 # In the end we will run the admin on local host
-cd ../AdminDashboard
-sudo cp /etc/rc.local /etc/rc.local_bkp
 sudo chmod 755 ../AdminDashboard/adminDashboard.py
 
 # Copy the job sh file
