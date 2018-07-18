@@ -15,10 +15,10 @@ echo "___ Adding the admin server to the boot list"
 sudo chmod 755 ../AdminDashboard/adminDashboard.py
 
 # Copy the job sh file
-sudo tr '\r' '\n' < AdminService.sh > AdminService.sh
-sudo cp AdminService.sh /etc/init.d
-sudo chmod 755 /etc/init.d/AdminService.sh
-sudo /etc/init.d/AdminService.sh start
+sudo tr '\r' '\n' < AdminService.sh > AdminService.unix.sh
+sudo cp AdminService.unix.sh /etc/init.d
+sudo chmod 755 /etc/init.d/AdminService.unix.sh
+sudo /etc/init.d/AdminService.unix.sh start
 
 
 
