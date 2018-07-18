@@ -1,5 +1,4 @@
 #!/bin/sh
-
 ### BEGIN INIT INFO
 # Provides:          myservice
 # Required-Start:    $remote_fs $syslog
