@@ -17,7 +17,7 @@ sudo chmod 755 ../AdminDashboard/adminDashboard.py
 # Copy the job sh file
 sudo cp AdminService.sh /etc/init.d
 sudo chmod 755 /etc/init.d/AdminService.sh
-tr '\r' '\n' < /etc/init.d/AdminService.sh > /etc/init.d/AdminService.sh
+sudp tr '\r' '\n' < /etc/init.d/AdminService.sh > /etc/init.d/AdminService.sh
 sudo /etc/init.d/AdminService.sh start
 
 
