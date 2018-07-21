@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve adminDashboard
+After=network.target
+
+[Service]
+User=pi
+Group=www-data
+WorkingDirectory=/home/pi/TheBox/AdminDashboard
+Environment="PATH=/etc/bin"
+ExecStart=/etc/bin uwsgi --ini adminDashboard.ini
+
+[Install]
+WantedBy=multi-user.target
