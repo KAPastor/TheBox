@@ -4,7 +4,7 @@
 
 echo "The Box (v0.1): Initial System Setup"
 echo "___ Installing python3+pip"
-sudo apt-get install python3-pip
+sudo apt-get install python3-pip python3-dev nginx
 
 # Need to install python packages based on the requirements.txt in this directory
 echo "___ Installing required python packages"
@@ -14,11 +14,18 @@ echo "___ Adding the admin server to the boot list"
 # In the end we will run the admin on local host
 sudo chmod 755 ../AdminDashboard/adminDashboard.py
 
-# Copy the job sh file
-sudo tr '\r' '\n' < AdminService.sh > AdminService.unix.sh
-sudo cp AdminService.unix.sh /etc/init.d
-sudo chmod 755 /etc/init.d/AdminService.unix.sh
-sudo /etc/init.d/AdminService.unix.sh start
+
+
+/etc/systemd/system/adminDashboard.service
+sudo systemctl start myproject
+sudo systemctl enable myproject
+sudo nano /etc/nginx/sites-available/myproject
+sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled
+sudo nginx -t
+sudo systemctl restart nginx
+sudo ufw delete allow 5000
+sudo ufw allow 'Nginx Full'
+
 
 
 
